@@ -8,7 +8,7 @@
 
 body {
     margin: 0;
-    background-color:#111;
+    background-color: #060606;
 }
 
 @font-face {
@@ -22,19 +22,59 @@ div {
     font-family: 'Golden Age';
 }
 
+.btn-border {
+    --borderc: #3d0724;
+    --border-color-acc: #b80665;
+}
+
+
 .btn-container {
     display: flex;
     align-items: center;
     font-family: 'Golden Age';
-    gap: 8px;
+    gap: 6px;
     font-size: 20px;
     color: #ddd;
-    padding: 4px 8px;
-    /* border: 1px solid rgb(61, 7, 36); */
+    padding: 3px 10px 4px 2px;
+    position: relative;
+    box-sizing: border-box;
 }
+
+
+.btn-border {
+    border: 2px solid black;
+    border-color: var(--borderc);
+    box-sizing: border-box;
+    z-index: 2;
+}
+.btn-border:before {
+    content: " ";
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    border-color: var(--borderc);
+    
+    width: 2px;
+    height: 2px;
+    display: table;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.btn-border-shadow {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    display: none;
+}
+
 
 .btn-container:hover {
     cursor: pointer;
+}
+
+.btn-container > span {
+    z-index: 3;
+    position: relative;
 }
 
 .cnt {
