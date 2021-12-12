@@ -1,0 +1,5 @@
+frames/f
+frames/env
+.DS_Store
+dist
+node_modules

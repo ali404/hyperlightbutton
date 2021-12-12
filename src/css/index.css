@@ -1,0 +1,83 @@
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    width: 100vw;
+}
+
+body {
+    margin: 0;
+    background-color:#111;
+}
+
+@font-face {
+    font-family: 'Golden Age';
+    src: url('../assets/Golden\ Age.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+div {
+    font-family: 'Golden Age';
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    font-family: 'Golden Age';
+    gap: 8px;
+    font-size: 20px;
+    color: #ddd;
+    padding: 4px 8px;
+    /* border: 1px solid rgb(61, 7, 36); */
+}
+
+.btn-container:hover {
+    cursor: pointer;
+}
+
+.cnt {
+    width: 22px;
+    height: 22px;
+    position: relative;
+    content: " ";
+    background-color: gray;
+}
+
+.btn {
+    width: 2px;
+    height: 2px;
+    padding: 10px;
+    background-color: rgb(200,200,200);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+
+    color: #111;
+}
+
+.cnt {
+    display: none;
+}
+
+.cnt-blue, .cnt-red {
+    position: absolute;
+    opacity: 0;
+}
+
+.cnt-blue {
+    background-color: rgb(9, 255, 226);
+    z-index: 1;
+}
+
+.cnt-yellow {
+    background-color: rgb(249, 249, 164);
+    z-index: 2;
+}
+
+.cnt-red {
+    background-color: rgb(255, 56, 115);
+    z-index: 1;
+}
